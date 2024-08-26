@@ -1,0 +1,10 @@
+body {
+    background-color: lightblue;
+    font-family: verdana;
+  }
+nav{
+    background-color:green ;
+    display:flexbox;
+    justify-content: space-between;
+    align-items: center;
+}  

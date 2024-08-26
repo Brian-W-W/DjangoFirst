@@ -1,0 +1,43 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ mymember.firstname }} {{ mymember.lastname }}
+{% endblock %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{%static 'details.css' %}">
+{% block content %}
+<div class="navigation">
+
+  <h1>Guyva Golf Club</h1>
+      <nav>
+        <ul>
+          <li><a href="/group_one">Members</a></li>
+          <li><a href="/">Home</a></li>
+        </ul>
+          
+    </div>
+   
+  <style>
+    body {
+      background-color:none;
+      font-family: verdana;
+    }
+    .navigation{
+      background-color:green ;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+  }  
+  h3{
+    color:blue;
+  }
+  </style>
+
+  <!--details-->
+<h3>Name: {{ mymember.firstname }} {{ mymember.lastname }}</h3>
+<p>Role: {{ mymember.role }}</p>
+<p> Member's Id: {{ mymember.Id }}</p>
+<p> Date Joined: {{ mymember.joined_date }}</p>
+{% endblock %}

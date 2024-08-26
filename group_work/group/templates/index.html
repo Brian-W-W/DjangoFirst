@@ -1,0 +1,41 @@
+{% extends "master.html" %}
+
+{% block title %}
+  My Tennis Club - List of all members
+{% endblock %}
+
+
+{% block content %}
+<div class="navigation">
+
+  <h1>Guyva Golf Club</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          {% for x in group_members %}
+            <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+          {% endfor %}
+        </ul>  </nav>
+    </div>
+     <style>
+    body {
+      background-color:none;
+      font-family: verdana;
+    }
+    .navigation{
+      background-color:green;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+  }  
+  </style>
+
+<h2>Welcome to our Member's page</h2>
+<h3>We are glad to have you</h3>
+<p>Before we begin,<br>
+  Welcome to the Guyva Golf Club!
+  It's a pleasure to have you all here for our members presentation.A club cannot be a club without united members.<br> 
+That is why Guyva Golf Club has a vision to make Golf an enjoyable game in Kenya. </p>
+<p> Each member has a designated role to play to drive this club beyond it's limits. Please visit the <h>navigation bar</h> to check out our members and their details.</p>
+
+{% endblock %}
